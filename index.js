@@ -36,7 +36,7 @@ app.use(cookieParser());
 //-------------------- Express js server Config -----------
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
-app.use(cors({ credentials: true, origin: "https://armarium.az" }));
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 
 app.use("/images", express.static("images"));
 
