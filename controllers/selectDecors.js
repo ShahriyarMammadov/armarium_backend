@@ -49,7 +49,7 @@ export const getSelectedDecors = async (req, res) => {
 export const removeNameFromSelectedDecor = async (req, res) => {
   try {
     const { name } = req.query;
-    const selectedDecorId = "64fc9119db08d97bb86ac4b9";
+    const selectedDecorId = "64fc91c4d50e1ac93df0a642";
 
     const result = await selectedDecorModel.updateOne(
       { _id: selectedDecorId },
