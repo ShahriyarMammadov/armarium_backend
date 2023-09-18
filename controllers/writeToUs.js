@@ -32,7 +32,7 @@ export const addWriteToUs = async (req, res) => {
       from: "shahriyarmammadov16@gmail.com",
       to: "tu1d1f9a@code.edu.az",
       subject: "Sayt Üzərindən Yeni Bir Məktub Var",
-      text: "Yeni bir Məktub Əlave Edildi.",
+      text: `Ad: ${fullName}, Mətn: ${text}, Email: ${email}`,
     };
 
     await transporter.sendMail(mailOptions);
