@@ -72,7 +72,7 @@ export const removeNameFromSelectedDecor = async (req, res) => {
 // Add Name To Selected Decor
 export const addNameToSelectedDecor = async (req, res) => {
   try {
-    const selectedDecorId = "64fc9119db08d97bb86ac4b9";
+    const selectedDecorId = "64fc91c4d50e1ac93df0a642";
     const { selectedNames } = req.body;
 
     const existingSelectedDecor = await selectedDecorModel.findOne({
