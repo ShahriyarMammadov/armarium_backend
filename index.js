@@ -29,9 +29,10 @@ config();
 // --------------------------------------------------------
 
 //-------------------- Express js server Config -----------
+// https://armarium.az
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
-app.use(cors({ credentials: true, origin: "https://armarium.az" }));
+app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
 
 app.use("/images", express.static("images"));
 
