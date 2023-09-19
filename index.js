@@ -17,6 +17,7 @@ import vacancyRouter from "./routers/vacancies.js";
 import userRouter from "./routers/user.js";
 import writeToUs from "./routers/writeToUs.js";
 import search from "./routers/search.js";
+import doorRouter from "./routers/door.js";
 import { checkAdmin } from "./middleware/checkAdmin.js";
 // --------------------------------------------------------
 
@@ -29,10 +30,9 @@ config();
 // --------------------------------------------------------
 
 //-------------------- Express js server Config -----------
-// https://armarium.az
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
-app.use(cors({ credentials: true, origin: "http://localhost:5173" }));
+app.use(cors({ credentials: true, origin: "https://armarium.az" }));
 
 app.use("/images", express.static("images"));
 
@@ -50,6 +50,7 @@ app.use("/reference", referenceRouter);
 app.use("/vacancy", vacancyRouter);
 app.use("/user", userRouter);
 app.use("/writeToUs", writeToUs);
+app.use("/door", doorRouter);
 app.use("/search", search);
 app.use("/checkAdmin", checkAdmin);
 // --------------------------------------------------------
