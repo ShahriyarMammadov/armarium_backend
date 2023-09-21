@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     if (extensionFile.includes(path.extname(file.originalname))) {
       cb(err, "images");
     } else {
-      err = new Error("Sonu .jpg, .png, .gif fayllar elave edin!");
+      err = new Error("Sonu .jpg, .png, .gif, .jpeg fayllar elave edin!");
     }
   },
   filename: function (req, file, cb) {
