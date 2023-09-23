@@ -35,7 +35,11 @@ app.use(bodyParser.urlencoded({ limit: "100mb", extended: true }));
 app.use(
   cors({
     credentials: true,
-    origin: ["https://adminpanel.armarium.az", "https://armarium.az"],
+    origin: [
+      "https://adminpanel.armarium.az",
+      "https://armarium.az",
+      "http://localhost:5173",
+    ],
   })
 );
 
