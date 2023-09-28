@@ -186,7 +186,7 @@ export const deleteReferenceByName = async (req, res) => {
     }
 
     res.json({
-      message: `${deletedReference} Adlı Dekor Uğurla Silindi.`,
+      message: `${deletedReference} Adlı Referans Uğurla Silindi.`,
     });
   } catch (error) {
     res.status(500).json({ error: error.message });

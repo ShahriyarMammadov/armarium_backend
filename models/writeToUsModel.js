@@ -6,9 +6,16 @@ const writeToUsSchema = new Schema(
     email: { type: String, required: true },
     phoneNumber: { type: String },
     text: { type: String, required: true },
-    date: { type: Date, default: Date.now() },
+    date: { type: Date },
   },
   { versionKey: false, timestamps: true }
 );
+
+writeToUsSchema.pre("save", function (next) {
+  if (!this.date) {
+    this.date = new Date();
+  }
+  next();
+});
 
 export const writeToUsModel = model("writeToUs", writeToUsSchema);

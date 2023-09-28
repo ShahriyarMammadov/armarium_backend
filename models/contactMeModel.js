@@ -8,4 +8,11 @@ const contactMeSchema = new Schema(
   { versionKey: false, timestamps: true }
 );
 
+contactMeSchema.pre("save", function (next) {
+  if (!this.date) {
+    this.date = new Date();
+  }
+  next();
+});
+
 export const contactMeModal = model("contactMe", contactMeSchema);

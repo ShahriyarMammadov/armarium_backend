@@ -18,6 +18,7 @@ import userRouter from "./routers/user.js";
 import writeToUs from "./routers/writeToUs.js";
 import search from "./routers/search.js";
 import doorRouter from "./routers/door.js";
+import aboutRouter from "./routers/about.js";
 import { checkAdmin } from "./middleware/checkAdmin.js";
 // --------------------------------------------------------
 
@@ -61,6 +62,7 @@ app.use("/user", userRouter);
 app.use("/writeToUs", writeToUs);
 app.use("/door", doorRouter);
 app.use("/search", search);
+app.use("/about", aboutRouter);
 app.use("/checkAdmin", checkAdmin);
 // --------------------------------------------------------
 
