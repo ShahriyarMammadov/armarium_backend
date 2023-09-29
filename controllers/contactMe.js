@@ -27,7 +27,7 @@ export const addContactMe = async (req, res) => {
 
     const mailOptions = {
       from: "shahriyarmammadov16@gmail.com",
-      to: "tu1d1f9a@code.edu.az",
+      to: "info@armarium.az",
       subject: "Armarium | Yeni Telefon Nömrəsi Əlavə Edildi",
       text: `${phoneNumber} nömrəsi əlavə edildi`,
     };

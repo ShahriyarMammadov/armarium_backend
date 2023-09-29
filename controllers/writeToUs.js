@@ -30,7 +30,7 @@ export const addWriteToUs = async (req, res) => {
 
     const mailOptions = {
       from: "shahriyarmammadov16@gmail.com",
-      to: "tu1d1f9a@code.edu.az",
+      to: "info@armarium.az",
       subject: "Sayt Üzərindən Yeni Bir Məktub Var",
       text: `Ad: ${fullName}, Mətn: ${text}, Email: ${email}`,
     };
