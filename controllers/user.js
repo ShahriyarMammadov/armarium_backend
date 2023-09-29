@@ -108,7 +108,6 @@ export const editUserDataById = async (req, res) => {
       req.body.profilePhoto = profilePhotoPath.toString();
     }
 
-    console.log("req", req.body);
     const user = await userModel.findByIdAndUpdate(id, req.body);
 
     return res.status(200).json(user);

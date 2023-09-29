@@ -81,7 +81,6 @@ export const allDecor = async (req, res) => {
 export const decorByName = async (req, res) => {
   try {
     const { decorName } = req.params;
-    console.log(decorName);
     const decors = await decorModel.find({ name: decorName });
 
     if (!decors) {
@@ -138,7 +137,6 @@ export const editDecorByName = async (req, res) => {
 export const deleteDecorByName = async (req, res) => {
   try {
     const decorNameToDelete = req.params.id;
-    console.log(decorNameToDelete);
 
     const deletedDecor = await decorModel.findOneAndDelete({
       _id: decorNameToDelete,

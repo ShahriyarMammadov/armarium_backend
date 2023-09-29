@@ -141,7 +141,6 @@ export const editReferenceByName = async (req, res) => {
 export const deleteReferenceByName = async (req, res) => {
   try {
     const referenceName = req.params.id;
-    console.log(referenceName);
 
     const deletedReference = await referencesModel.findOneAndDelete({
       _id: referenceName,

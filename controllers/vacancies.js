@@ -135,7 +135,6 @@ export const editVacancyByName = async (req, res) => {
 export const deleteVacancyByName = async (req, res) => {
   try {
     const vacancyName = req.params.vacancyName;
-    console.log(vacancyName);
 
     const deletedVacancy = await vacanciesModel.findOneAndDelete({
       name: vacancyName,

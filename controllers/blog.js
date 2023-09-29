@@ -124,8 +124,6 @@ export const deleteBLogByName = async (req, res) => {
   try {
     const blogNameToDelete = req.params.id;
 
-    console.log(blogNameToDelete);
-
     const deletedBlog = await blogModel.findOneAndDelete({
       name: blogNameToDelete,
     });

@@ -47,8 +47,6 @@ export const deleteCertificate = async (req, res) => {
       _id: id,
     });
 
-    console.log(deletedCertificate);
-
     if (!deletedCertificate) {
       return res.status(404).json({ message: "Sertifikat Tapılmadı" });
     }
