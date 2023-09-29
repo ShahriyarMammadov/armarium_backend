@@ -15,6 +15,11 @@ import {
   allCertificate,
   deleteCertificate,
 } from "../controllers/sertifikat.js";
+import {
+  createZemanet,
+  editZemanet,
+  getZemanetById,
+} from "../controllers/zemanet.js";
 const aboutRouter = Router();
 
 aboutRouter.post(
@@ -33,5 +38,9 @@ aboutRouter.get("/getHaqqimizda/:id", getAboutById);
 aboutRouter.put("/editMissiya/:id", editMission);
 aboutRouter.post("/addMissiya", createMission);
 aboutRouter.get("/getMissiya/:id", getMissionById);
+
+aboutRouter.put("/editZemanet/:id", editZemanet);
+aboutRouter.post("/addZemanet", createZemanet);
+aboutRouter.get("/getZemanet/:id", getZemanetById);
 
 export default aboutRouter;

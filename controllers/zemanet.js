@@ -1,10 +1,10 @@
-import { missionModel } from "../models/missiya.js";
+import { zemanetModel } from "../models/zemanet.js";
 
-export const createMission = async (req, res) => {
+export const createZemanet = async (req, res) => {
   try {
     const { about } = req.body;
 
-    const newAbout = new missionModel({
+    const newAbout = new zemanetModel({
       about,
     });
 
@@ -17,11 +17,11 @@ export const createMission = async (req, res) => {
   }
 };
 
-export const getMissionById = async (req, res) => {
+export const getZemanetById = async (req, res) => {
   try {
     const id = req.params.id;
 
-    const about = await missionModel.findById(id);
+    const about = await zemanetModel.findById(id);
 
     if (!about) {
       return res.status(404).json({ message: "Tapılmadı" });
@@ -34,12 +34,12 @@ export const getMissionById = async (req, res) => {
   }
 };
 
-export const editMission = async (req, res) => {
+export const editZemanet = async (req, res) => {
   try {
     const { about } = req.body;
     const id = req.params.id;
 
-    const aboutData = await missionModel.findOne({ _id: id });
+    const aboutData = await zemanetModel.findOne({ _id: id });
 
     if (!about) {
       return res.status(404).json({ message: "Tapilmadi" });
