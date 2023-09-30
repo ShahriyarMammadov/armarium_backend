@@ -4,7 +4,7 @@ const referencesSchema = new Schema(
   {
     images: { type: Array, required: true },
     coverImage: { type: String, required: true },
-    name: { type: String, unique: true, required: true },
+    name: { type: String, required: true },
     date: { type: Date },
   },
   { versionKey: false, timestamps: true }
