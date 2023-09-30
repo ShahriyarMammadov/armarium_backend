@@ -45,7 +45,7 @@ export const editBackImage = async (req, res) => {
   try {
     const { pageName } = req.params;
 
-    const existingImage = await backImageModel.findOne({ pageName });
+    const existingImage = await backImageModel.findOne({ page: pageName });
 
     if (!existingImage) {
       return res.status(404).json({
@@ -60,6 +60,8 @@ export const editBackImage = async (req, res) => {
     }
 
     const newCoverImage = req.files.coverImage[0].filename;
+
+    console.log(existingImage, newCoverImage);
 
     const coverImagePath = uploadDir + existingImage.coverImage;
     fs.unlink(coverImagePath, (err) => {
