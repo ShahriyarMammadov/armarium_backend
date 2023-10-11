@@ -75,7 +75,7 @@ export const editSalesPoint = async (req, res) => {
     if (!salesPointData) {
       return res.status(404).json({ message: "Tapilmadi" });
     }
-
+    // sales
     salesPointData.gosterilenXidmetler = gosterilenXidmetler;
     salesPointData.saat = saat;
     salesPointData.phoneNumber = phoneNumber;
