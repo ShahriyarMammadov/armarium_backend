@@ -21,6 +21,7 @@ import doorRouter from "./routers/door.js";
 import aboutRouter from "./routers/about.js";
 import backImageRouter from "./routers/backImageChange.js";
 import { checkAdmin } from "./middleware/checkAdmin.js";
+import salesPointRouter from "./routers/salesPoint.js";
 // --------------------------------------------------------
 
 //------------------------- Morgan ------------------------
@@ -41,7 +42,6 @@ app.use(
       "https://adminpanel.armarium.az",
       "https://armarium.az",
       "http://localhost:5173",
-      "https://armarium.netlify.app/",
     ],
   })
 );
@@ -66,6 +66,7 @@ app.use("/door", doorRouter);
 app.use("/search", search);
 app.use("/backImage", backImageRouter);
 app.use("/about", aboutRouter);
+app.use("/salesPoint", salesPointRouter);
 app.use("/checkAdmin", checkAdmin);
 // --------------------------------------------------------
 
