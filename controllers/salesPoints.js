@@ -76,12 +76,12 @@ export const editSalesPoint = async (req, res) => {
       return res.status(404).json({ message: "Tapilmadi" });
     }
 
-    aboutData.gosterilenXidmetler = gosterilenXidmetler;
-    aboutData.saat = saat;
-    aboutData.phoneNumber = phoneNumber;
-    aboutData.address = address;
-    aboutData.email = email;
-    aboutData.contactPerson = contactPerson;
+    salesPointData.gosterilenXidmetler = gosterilenXidmetler;
+    salesPointData.saat = saat;
+    salesPointData.phoneNumber = phoneNumber;
+    salesPointData.address = address;
+    salesPointData.email = email;
+    salesPointData.contactPerson = contactPerson;
 
     await salesPointData.save();
 
