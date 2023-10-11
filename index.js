@@ -41,7 +41,7 @@ app.use(
       "https://adminpanel.armarium.az",
       "https://armarium.az",
       "http://localhost:5173",
-      "https://armarium.netlify.app/",
+      "https://armarium.netlify.app",
     ],
   })
 );
