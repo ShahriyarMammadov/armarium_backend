@@ -11,8 +11,8 @@ salesPointRouter.post("/createSalesPoint", createSalesPoint);
 
 salesPointRouter.get("/allSalesPoint", allSalesPoint);
 
-salesPointRouter.get("/allSalesPointById", getSalesById);
+salesPointRouter.get("/salesPointById/:id", getSalesById);
 
-salesPointRouter.patch("/editSalesPoint", editSalesPoint);
+salesPointRouter.patch("/editSalesPoint/:id", editSalesPoint);
 
 export default salesPointRouter;
