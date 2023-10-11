@@ -14,7 +14,7 @@ const decorRouter = Router();
 decorRouter.post(
   "/addDecor/:id",
   upload.fields([
-    { name: "images", maxCount: 15 },
+    { name: "images", maxCount: 25 },
     { name: "coverImage", maxCount: 1 },
   ]),
   addDecor

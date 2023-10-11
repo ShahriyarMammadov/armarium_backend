@@ -14,7 +14,7 @@ const referenceRouter = Router();
 referenceRouter.post(
   "/addReference/:id",
   upload.fields([
-    { name: "images", maxCount: 15 },
+    { name: "images", maxCount: 30 },
     { name: "coverImage", maxCount: 1 },
   ]),
   addReference
