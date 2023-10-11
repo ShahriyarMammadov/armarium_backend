@@ -85,7 +85,7 @@ export const editSalesPoint = async (req, res) => {
 
     await salesPointData.save();
 
-    res.status(200).json({ message: "Redaktə Edildi", data: aboutData });
+    res.status(200).json({ message: "Redaktə Edildi", data: salesPointData });
   } catch (error) {
     console.log(error);
     res.status(500).json({ error: error.message });
